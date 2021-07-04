@@ -1,0 +1,263 @@
+
+
+body{
+    height: 100vh;
+    margin: 0px;
+    font-family: 'Roboto';
+}
+.cards {
+    display: flex;
+    justify-content: center;
+    max-width: 1440px;
+    margin: 0 auto;
+    height: 70vh;
+    position: relative;
+}
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    padding: 30px; 
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    z-index: 2;
+    max-height: 532px;
+}
+
+.flex-col {
+    display: flex;
+    flex-direction: row;
+    padding: 12px;
+    
+    position: static;
+    width: 230px;
+    min-height: 100px;
+    left: 0px;
+    top: 0px;
+    
+    background: #FFFFFF;
+    
+    box-shadow: 0px 0px 16px rgba(37, 40, 43, 0.1);
+    border-radius: 4px;    
+}
+
+/*card*/
+.my-img {
+    width: 60px;
+    height: 60px;   
+}
+
+.my-title {
+    font-size: 15px;
+    margin-top: 0;
+}
+.card-inside-1 {
+    margin-right: 12px;
+}
+.card-inside-2 span {
+    font-size: 13px;
+} 
+.my-status {
+    position: relative;
+    margin-left: 18px;
+}
+.my-status.alive::before {
+    content: "";
+    width: 12px;
+    height: 12px;
+    background-color: #2AC769;
+    position: absolute;
+    border-radius: 50%;
+    top: 3px;
+    left: -18px;
+}
+.my-status.dead::before {
+    content: "";
+    width: 12px;
+    height: 12px;
+    background-color: #B82828;
+    position: absolute;
+    border-radius: 50%;
+    top: 3px;
+    left: -18px;
+}
+.my-status.unknown::before {
+    content: "";
+    width: 12px;
+    height: 12px;
+    background-color: #A0A3A8;
+    position: absolute;
+    border-radius: 50%;
+    top: 3px;
+    left: -18px;
+}
+/**/
+
+/*full width container*/
+.container-full {
+    width: 100%;
+    height: 70vh;
+}
+.container-full-entry {
+    width: 100%;
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+.container-full-entry-bg  {
+    background-image: url('Vector.png'); /* The image used */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    position: relative;
+}
+/**/
+
+/*logo*/
+.logo {
+    position: absolute;
+    top: 45px;
+    left: 45px;
+}
+/**/
+
+
+/*background-image*/
+.div-pos {
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    height: 70vh;
+}
+.container-bg {
+    position: relative;
+    background-color: #03B0C8;
+}
+.container-bg::before {
+    content: "";
+    position: absolute;
+    background-image: url('Image.png'); /* The image used */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+    opacity: 3;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+/**/
+
+/*welcome title*/
+.welcome-title {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 56px;
+    text-align: center;
+}
+/**/
+
+/*my button*/
+.my-btn-left {
+    position: absolute;
+    z-index: 10000;
+    width: fit-content;
+    height: 32px;
+    bottom: 20px;
+    left: 0;
+    margin-left: 47px;
+
+    background: #FFFFFF;
+    border: 1px solid #DFE3E8;
+    box-sizing: border-box;
+    border-radius: 4px;
+
+}
+.my-btn-right {
+    position: absolute;
+    z-index: 10000;
+    width: fit-content;
+    height: 32px;
+    bottom: 20px;
+    left: 40px;
+    margin-left: 35px;
+
+    background: #FFFFFF;
+    border: 1px solid #DFE3E8;
+    box-sizing: border-box;
+    border-radius: 4px;
+    
+
+}
+/**/
+
+
+/*modal*/
+.modal.open-modal {
+    z-index: 10;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    text-align: center;
+    width: 433px;
+    max-width: 433px;
+    min-height: 431px;
+    display: flex; /*flex*/
+    flex-direction: column;
+    align-content: center;
+    justify-content: flex-end;
+}
+
+.my-img-modal {
+    max-width: 143px;   
+}
+.modal-first  {
+    margin-bottom: 13px;
+}
+.modal-second  {
+    display: flex;
+    flex-direction: column;
+    background-color: #03B0C8;
+}
+.modal-second p {
+    color: #fff;
+    font-weight: 700;
+}
+.modal-close {
+    display: none !important;
+}
+/**/
+
+/*MEDIA*/
+@media only screen and (max-width: 1443px) {
+    .flex-col {
+        padding: 2px;
+        width: 144px;
+        min-height: 80px;
+    }
+    .my-title {
+        font-size: 13px;
+    }
+    .card-inside-2 span {
+        font-size: 12px;
+    } 
+    .my-img {
+        width: 40px;
+        height: 40px;
+    }  
+    .welcome-title {
+        font-size: 40px;
+    }   
+}
+@media only screen and (max-width: 900px) {
+    .welcome-title {
+        font-size: 30px;
+    }    
+}
